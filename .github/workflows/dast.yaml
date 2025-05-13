@@ -10,4 +10,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - uses: trufflesecurity/trufflehog@v3.88.29
+        with:
+          fetch-depth: 0
+      - name: Secret Scanning
+        uses: trufflesecurity/trufflehog@v3.88.29
+        with:
+          extra_args: --results=verified,unknown
