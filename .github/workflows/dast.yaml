@@ -1,5 +1,10 @@
 name: DAST
 
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   DAST:
     runs-on: ubuntu-22.04
