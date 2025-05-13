@@ -1,0 +1,8 @@
+name: DAST
+
+jobs:
+  DAST:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: trufflesecurity/trufflehog@v3.88.29
